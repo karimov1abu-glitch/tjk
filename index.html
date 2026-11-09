@@ -1,0 +1,291 @@
+
+<!DOCTYPE html>
+<html lang="tg">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тоҷикистон — Сарзамини зебоӣ</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header>
+        <div class="nav-shell" id="shell">
+
+            <div class="nav-top">
+
+                <div class="logo">
+                    ТОҶИКИСТОН 
+                </div>
+
+                <div class="nav-links">
+                    <button class="active" data-panel="home">Асосӣ</button>
+                    <button data-panel="places">Ҷойҳо</button>
+                    <button data-panel="culture">Фарҳанг</button>
+                </div>
+
+                <button class="menu-btn" id="menuBtn">
+                    Меню +
+                </button>
+
+            </div>
+
+            <div class="panel">
+                <div class="panel-inner">
+                    <div class="panel-content" id="panelContent">
+                        <h3>Хуш омадед ба Тоҷикистон!</h3>
+                        <p>Сарзамини кӯҳҳои баланд ва кӯлҳои зебо.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <small>WELCOME TO TAJIKISTAN</small>
+
+            <h1>
+                ТОҶИКИСТОН 
+                <br>
+                БИҲИШТИ РӮИ ЗАМИН
+            </h1>
+
+            <p>
+                Кишвари зебои мо бо кӯҳҳои сарбафалак,
+                кӯлҳои мусаффо ва табиати нотакрор.
+                Тоҷикистонро кашф намо!
+            </p>
+
+            <a href="#places">
+                Кашф кардани Тоҷикистон ↗
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT SECTION -->
+    <section class="about-section">
+
+        <div class="about">
+
+            <img
+                src="https://photos.altai-travel.com/1920x0/lac-iskanderkul-dans-les-monts-fan-yurybirukov-38747.jpg"
+                alt="Искандаркӯл">
+
+            <div class="about-content">
+
+                <h2>Тоҷикистон — кишвари кӯҳҳо</h2>
+
+                <p>
+                    Тоҷикистон дар Осиёи Марказӣ ҷойгир буда,
+                    бо табиати зебо, кӯҳҳои Помир, дарёҳои мусаффо
+                    ва кӯлҳои нотакрори худ машҳур аст.
+                    Ин сарзамин дорои таърихи қадима,
+                    фарҳанги бой ва мардуми меҳмоннавоз мебошад.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- DESTINATIONS -->
+    <section class="destinations" id="places">
+
+        <div class="section-title">
+
+            <small>EXPLORE TAJIKISTAN</small>
+
+            <h2>Ҷойҳои зебои Тоҷикистон</h2>
+
+        </div>
+
+        <div class="cards">
+
+            <article class="card">
+
+                <img
+                    src="https://photos.altai-travel.com/1920x0/lac-iskanderkul-dans-les-monts-fan-yurybirukov-38747.jpg"
+                    alt="Искандаркӯл">
+
+                <div class="card-info">
+                    <h3>Искандаркӯл</h3>
+                    <p>Кӯли зебо дар кӯҳҳои Фон</p>
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <img
+                    src="https://tour.tj/upload/iblock/577/jaybeb404tbtti4ot74uoq9zou31zokd.jpg"
+                    alt="Табиати кӯҳӣ">
+
+                <div class="card-info">
+                    <h3>Кӯҳистон</h3>
+                    <p>Манзараҳои нотакрори кӯҳистон</p>
+                </div>
+
+            </article>
+
+
+            <article class="card">
+
+                <img
+                    src="https://cf.youtravel.me/tr%3Aw-1500/upload/chat/520/ba911ee5jvbmx9o9g7ll445qiew86fma.jpg"
+                    alt="Кӯли кӯҳӣ">
+
+                <div class="card-info">
+                    <h3>Кӯлҳои кӯҳӣ</h3>
+                    <p>Зебоии табиати Тоҷикистон</p>
+                </div>
+
+            </article>
+
+        </div>
+
+    </section>
+
+
+    <!-- GALLERY -->
+    <section class="gallery-section">
+
+        <div class="section-title">
+
+            <small>PHOTO GALLERY</small>
+
+            <h2>Галереяи Тоҷикистон</h2>
+
+        </div>
+
+        <div class="gallery">
+
+            <div class="slide active" onclick="selectSlide(this)">
+
+                <img
+                    src="https://photos.altai-travel.com/1920x0/lac-iskanderkul-dans-les-monts-fan-yurybirukov-38747.jpg"
+                    alt="Искандаркӯл">
+
+                <span>Искандаркӯл</span>
+
+            </div>
+
+
+            <div class="slide" onclick="selectSlide(this)">
+
+                <img
+                    src="https://tour.tj/upload/iblock/577/jaybeb404tbtti4ot74uoq9zou31zokd.jpg"
+                    alt="Кӯҳистон">
+
+                <span>Кӯҳистон</span>
+
+            </div>
+
+
+            <div class="slide" onclick="selectSlide(this)">
+
+                <img
+                    src="https://cf.youtravel.me/tr%3Aw-1500/upload/chat/520/ba911ee5jvbmx9o9g7ll445qiew86fma.jpg"
+                    alt="Кӯли кӯҳӣ">
+
+                <span>Табиати зебо</span>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FACTS SECTION -->
+    <section class="facts">
+
+        <div class="section-title">
+
+            <small>DISCOVER MORE</small>
+
+            <h2>Дар бораи Тоҷикистон</h2>
+
+        </div>
+
+        <div class="accordion">
+
+            <div class="accordion-item active">
+
+                <div class="accordion-title" onclick="toggleAccordion(this)">
+                    Кӯҳҳои Помир
+                    <span>+</span>
+                </div>
+
+                <div class="accordion-text">
+                    Помир яке аз минтақаҳои баландкӯҳи машҳури
+                    ҷаҳон буда, бо манзараҳои аҷиб ва қуллаҳои
+                    барфпӯш машҳур аст.
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <div class="accordion-title" onclick="toggleAccordion(this)">
+                    Кӯлҳои Ҳафтрӯд
+                    <span>+</span>
+                </div>
+
+                <div class="accordion-text">
+                    Ҳафт кӯл маҷмӯи кӯлҳои зебои кӯҳӣ
+                    дар водии Шинг мебошанд.
+                </div>
+
+            </div>
+
+
+            <div class="accordion-item">
+
+                <div class="accordion-title" onclick="toggleAccordion(this)">
+                    Фарҳанг ва таърих
+                    <span>+</span>
+                </div>
+
+                <div class="accordion-text">
+                    Тоҷикистон дорои таърихи бой,
+                    анъанаҳои қадима ва фарҳанги ғанӣ мебошад.
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <p>
+            © 2026
+            <span>ТОҶИКИСТОН 🇹🇯</span>
+            — Сарзамини зебоӣ
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,666 @@
+
+/* =========================
+   GENERAL SETTINGS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101316;
+    color: white;
+    font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+
+button {
+    font-family: inherit;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+header {
+    position: absolute;
+    top: 20px;
+    width: 100%;
+    z-index: 10;
+    padding: 0 20px;
+}
+
+.nav-shell {
+    max-width: 850px;
+    margin: auto;
+    background: #171a1dcc;
+    backdrop-filter: blur(20px);
+    border: 1px solid #ffffff25;
+    border-radius: 30px;
+    padding: 12px 18px;
+    overflow: hidden;
+    transition: .5s;
+    box-shadow: 0 15px 50px #0005;
+}
+
+.nav-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.logo span {
+    color: #d9b36a;
+}
+
+.nav-links {
+    display: flex;
+    gap: 5px;
+}
+
+.nav-links button {
+    background: transparent;
+    border: none;
+    color: #ccc;
+    padding: 12px 15px;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.nav-links button.active,
+.nav-links button:hover {
+    background: #ffffff20;
+    color: white;
+}
+
+.menu-btn {
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    background: #d9b36a;
+    color: #171717;
+    font-weight: bold;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.menu-btn:hover {
+    background: white;
+    transform: scale(1.05);
+}
+
+/* DROPDOWN */
+
+.panel {
+    display: grid;
+    grid-template-rows: 0fr;
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(-15px);
+    transition: .5s;
+}
+
+.panel-inner {
+    overflow: hidden;
+}
+
+.nav-shell.open .panel {
+    grid-template-rows: 1fr;
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+.panel-content {
+    padding: 25px 5px 12px;
+    line-height: 2;
+}
+
+.panel-content p {
+    color: #aaa;
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+
+.hero {
+    height: 100vh;
+    min-height: 650px;
+
+    background:
+        linear-gradient(90deg, #000a, #0003),
+        url("https://photos.altai-travel.com/1920x0/lac-iskanderkul-dans-les-monts-fan-yurybirukov-38747.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    align-items: center;
+    padding: 100px 10%;
+}
+
+.hero-content {
+    max-width: 750px;
+    animation: appear 1.2s ease;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.hero small {
+    color: #e8c47c;
+    letter-spacing: 5px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(45px, 8vw, 95px);
+    line-height: 1.1;
+    margin: 25px 0;
+}
+
+.hero p {
+    color: #ddd;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 550px;
+}
+
+.hero a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 16px 28px;
+    background: #d9b36a;
+    color: #151515;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: .3s;
+}
+
+.hero a:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* =========================
+   ABOUT SECTION
+========================= */
+
+section {
+    padding: 100px 8%;
+}
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.about img {
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 25px;
+    transition: .5s;
+}
+
+.about img:hover {
+    transform: scale(1.03);
+}
+
+.about h2 {
+    font-size: 40px;
+    margin-bottom: 25px;
+}
+
+.about p {
+    color: #aaa;
+    line-height: 2;
+    font-size: 16px;
+}
+
+/* =========================
+   SECTION TITLES
+========================= */
+
+.section-title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-title small {
+    color: #d9b36a;
+    letter-spacing: 4px;
+}
+
+.section-title h2 {
+    font-size: clamp(30px, 5vw, 48px);
+    margin-top: 15px;
+}
+
+/* =========================
+   DESTINATIONS
+========================= */
+
+.destinations {
+    background: #171a1e;
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+}
+
+.card {
+    position: relative;
+    height: 430px;
+    border-radius: 22px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .7s;
+}
+
+.card:hover img {
+    transform: scale(1.12);
+}
+
+.card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(transparent, #000d);
+}
+
+.card-info {
+    position: absolute;
+    bottom: 25px;
+    left: 22px;
+    z-index: 2;
+}
+
+.card-info h3 {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.card-info p {
+    color: #ddd;
+    font-size: 14px;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery {
+    display: flex;
+    gap: 15px;
+    height: 420px;
+}
+
+.slide {
+    flex: 1;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.slide.active {
+    flex: 3;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: .5s;
+}
+
+.slide:hover img {
+    transform: scale(1.05);
+}
+
+.slide span {
+    position: absolute;
+    bottom: 20px;
+    left: 15px;
+    font-weight: bold;
+    text-shadow: 0 2px 10px black;
+}
+
+/* =========================
+   ACCORDION
+========================= */
+
+.facts {
+    background: #171a1e;
+}
+
+.accordion {
+    max-width: 850px;
+    margin: auto;
+}
+
+.accordion-item {
+    background: #252a30;
+    border-radius: 15px;
+    margin-bottom: 12px;
+    overflow: hidden;
+}
+
+.accordion-title {
+    padding: 23px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+}
+
+.accordion-title span {
+    color: #d9b36a;
+    transition: .3s;
+}
+
+.accordion-text {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 23px;
+    color: #aaa;
+    line-height: 1.8;
+    transition: .4s;
+}
+
+.accordion-item.active .accordion-text {
+    max-height: 150px;
+    padding: 0 23px 22px;
+}
+
+.accordion-item.active .accordion-title span {
+    transform: rotate(45deg);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: #0b0d10;
+    color: #888;
+}
+
+footer span {
+    color: #d9b36a;
+}
+
+/* ===== ANIMATIONS ===== */
+
+/* Пайдо шудани элементҳо */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Hero */
+.hero h1 {
+    animation: fadeUp 1.2s ease forwards;
+}
+
+.hero p {
+    animation: fadeUp 1.5s ease forwards;
+}
+
+/* Карточкаҳо */
+.card,
+.slide,
+.accordion-item {
+    transition: transform 0.5s ease,
+                box-shadow 0.5s ease;
+}
+
+.card:hover,
+.slide:hover {
+    transform: translateY(-12px) scale(1.03);
+    box-shadow: 0 20px 40px #0005;
+}
+
+/* Суратҳо */
+.card img,
+.slide img {
+    transition: transform 0.8s ease;
+}
+
+.card:hover img,
+.slide:hover img {
+    transform: scale(1.1);
+}
+
+/* Тугмаҳо */
+button {
+    transition: all 0.35s ease;
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+/* Меню */
+#shell,
+#panelContent {
+    transition: all 0.5s ease;
+}
+
+/* Пайдо шудани бахшҳо */
+section {
+    animation: fadeIn 1s ease both;
+}
+
+/* Барои телефон */
+@media (max-width: 600px) {
+    .card:hover,
+    .slide:hover {
+        transform: translateY(-5px);
+    }
+}
+
+/* SCROLL REVEAL */
+
+.reveal {
+    opacity: 0;
+    transform: translateY(60px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.reveal.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Таъхири пайдо шудани карточкаҳо */
+.reveal:nth-child(2) {
+    transition-delay: 0.2s;
+}
+
+.reveal:nth-child(3) {
+    transition-delay: 0.4s;
+}
+
+.reveal:nth-child(4) {
+    transition-delay: 0.6s;
+}
+
+
+/* =========================
+   TABLET RESPONSIVE
+========================= */
+
+@media(max-width: 900px) {
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about {
+        gap: 25px;
+    }
+
+    section {
+        padding: 80px 5%;
+    }
+
+}
+
+/* =========================
+   MOBILE RESPONSIVE
+========================= */
+
+@media(max-width: 600px) {
+
+    header {
+        padding: 10px;
+        top: 10px;
+    }
+
+    .nav-shell {
+        padding: 10px;
+    }
+
+    .logo {
+        font-size: 14px;
+    }
+
+    .nav-links button {
+        padding: 10px 7px;
+        font-size: 10px;
+    }
+
+    .menu-btn {
+        padding: 10px;
+        font-size: 11px;
+    }
+
+    .hero {
+        min-height: 700px;
+        background-position: center;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+    }
+
+    .about img {
+        height: 300px;
+    }
+
+    .about h2 {
+        font-size: 30px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        height: 350px;
+    }
+
+    .gallery {
+        height: 280px;
+        gap: 7px;
+    }
+
+    .slide.active {
+        flex: 3;
+    }
+
+    .slide span {
+        font-size: 11px;
+        left: 8px;
+        bottom: 10px;
+    }
+
+    section {
+        padding: 65px 18px;
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width: 370px) {
+
+    .nav-links button {
+        padding: 9px 5px;
+        font-size: 9px;
+    }
+
+    .logo {
+        font-size: 12px;
+    }
+
+    .menu-btn {
+        padding: 9px;
+    }
+
+}
